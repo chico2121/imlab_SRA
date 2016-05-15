@@ -93,28 +93,28 @@ class action(object):
                 G.add_edge('%s_r2' % loca4, 'end', weight=self.get_time(loca4, end_loca))
                 #G.add_edge('%s_r1' % loca3, '%s_r2' % loca4, weight=self.get_time(loca3, loca4))
 
-        for a, d in G.nodes_iter(data=True):
+        for a, d in G.nodes(data=True):
             data1 = d['loca']
             data2 = d['phase']
-            for b, e in G.nodes_iter(data=True):
+            for b, e in G.nodes(data=True):
                 data3 = e['loca']
                 data4 = e['phase']
                 if data2 == 1 and data4 == 2:
                     G.add_edge(a,b, weight=self.get_time(data1,data3))
 
-        for a, d in G.nodes_iter(data=True):
+        for a, d in G.nodes(data=True):
             data1 = d['loca']
             data2 = d['phase']
-            for b, e in G.nodes_iter(data=True):
+            for b, e in G.nodes(data=True):
                 data3 = e['loca']
                 data4 = e['phase']
                 if data2 == 2 and data4 == 3:
                     G.add_edge(a,b, weight=self.get_time(data1,data3))
 
-        for a, d in G.nodes_iter(data=True):
+        for a, d in G.nodes(data=True):
             data1 = d['loca']
             data2 = d['phase']
-            for b, e in G.nodes_iter(data=True):
+            for b, e in G.nodes(data=True):
                 data3 = e['loca']
                 data4 = e['phase']
                 if data2 == 3 and data4 == 4:
@@ -179,28 +179,28 @@ class action(object):
                 G.add_edge('%s_r1' % loca4, 'end', weight=self.get_time(loca4, end_loca))
                 # G.add_edge('%s_r1' % loca3, '%s_r2' % loca4, weight=self.get_time(loca3, loca4))
 
-        for a, d in G.nodes_iter(data=True):
+        for a, d in G.nodes(data=True):
             data1 = d['loca']
             data2 = d['phase']
-            for b, e in G.nodes_iter(data=True):
+            for b, e in G.nodes(data=True):
                 data3 = e['loca']
                 data4 = e['phase']
                 if data2 == 1 and data4 == 2:
                     G.add_edge(a, b, weight=self.get_time(data1, data3))
 
-        for a, d in G.nodes_iter(data=True):
+        for a, d in G.nodes(data=True):
             data1 = d['loca']
             data2 = d['phase']
-            for b, e in G.nodes_iter(data=True):
+            for b, e in G.nodes(data=True):
                 data3 = e['loca']
                 data4 = e['phase']
                 if data2 == 2 and data4 == 3:
                     G.add_edge(a, b, weight=self.get_time(data1, data3))
 
-        for a, d in G.nodes_iter(data=True):
+        for a, d in G.nodes(data=True):
             data1 = d['loca']
             data2 = d['phase']
-            for b, e in G.nodes_iter(data=True):
+            for b, e in G.nodes(data=True):
                 data3 = e['loca']
                 data4 = e['phase']
                 if data2 == 3 and data4 == 4:
@@ -275,19 +275,19 @@ class action(object):
                 G.add_node('%s_r2' % loca4, loca=loca4, phase=4)
                 G.add_edge('%s_r2' % loca4, 'end', weight=self.get_time(loca4, end_loca))
 
-        for a, d in G.nodes_iter(data=True):
+        for a, d in G.nodes(data=True):
             data1 = d['loca']
             data2 = d['phase']
-            for b, e in G.nodes_iter(data=True):
+            for b, e in G.nodes(data=True):
                 data3 = e['loca']
                 data4 = e['phase']
                 if data2 == 1 and data4 == 2:
                     G.add_edge(a, b, weight=self.get_time(data1, data3))
 
-        for a, d in G.nodes_iter(data=True):
+        for a, d in G.nodes(data=True):
             data1 = d['loca']
             data2 = d['phase']
-            for b, e in G.nodes_iter(data=True):
+            for b, e in G.nodes(data=True):
                 data3 = e['loca']
                 data4 = e['phase']
                 if data2 == 3 and data4 == 4:
@@ -355,19 +355,19 @@ class action(object):
                 G.add_node('%s_r1' % loca4, loca=loca4, phase=4)
                 G.add_edge('%s_r1' % loca4, 'end', weight=self.get_time(loca4, end_loca))
 
-        for a, d in G.nodes_iter(data=True):
+        for a, d in G.nodes(data=True):
             data1 = d['loca']
             data2 = d['phase']
-            for b, e in G.nodes_iter(data=True):
+            for b, e in G.nodes(data=True):
                 data3 = e['loca']
                 data4 = e['phase']
                 if data2 == 1 and data4 == 2:
                     G.add_edge(a, b, weight=self.get_time(data1, data3))
 
-        for a, d in G.nodes_iter(data=True):
+        for a, d in G.nodes(data=True):
             data1 = d['loca']
             data2 = d['phase']
-            for b, e in G.nodes_iter(data=True):
+            for b, e in G.nodes(data=True):
                 data3 = e['loca']
                 data4 = e['phase']
                 if data2 == 3 and data4 == 4:
