@@ -1,10 +1,10 @@
 import MySQLdb
 import random
-from learner import actiongenerator
-from learner import action
-from learner import reward
-from problemIO import problemreader
-from simulator import nextstate
+import actiongenerator
+import action
+import reward
+import problemreader
+import nextstate
 
 
 class ObservationGenerator(object):
