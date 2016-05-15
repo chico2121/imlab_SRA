@@ -1,6 +1,6 @@
 import MySQLdb
 import problem
-from simulator import rack
+import rack
 
 class ProblemReader(object):
 
