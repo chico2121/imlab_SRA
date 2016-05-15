@@ -120,7 +120,7 @@ class ObservationGenerator(object):
         ac = action.action()
 
         for i in range(1,12):
-            rs1 = problemreader.ProblemReader(tidx)
+            rs1 = test.get_problem(pidx).rack.status
             for j in range(len(input) / 2):
                 k = j + 1
                 inputs = input[(k * 2 - 2):k * 2]
@@ -189,7 +189,7 @@ class ObservationGenerator(object):
 
 
         for i in range(4):
-            rs1 = problemreader.ProblemReader(tidx)
+            rs1 = test.get_problem(pidx).rack.status
             for j in range(len(input) / 2):
                 k = j + 1
                 inputs = input[(k * 2 - 2):k * 2]
@@ -204,7 +204,7 @@ class ObservationGenerator(object):
                         tablename) + """ (pidx,rs,act,operation,inp,outp,reward,rsprime,terminal) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,'O')""",
                                 (pidx, str(rs1), fixed_act, i, str(inputs), str(outputs), cycletime, str(simul.change_rs(rs1, column, floor, new_sol))))
                     con.commit()
-                    rs1 = rs
+                    
                 else:
                     cur.execute("""INSERT INTO """ + """%s""" % (
                         tablename) + """ (pidx,rs,act,operation,inp,outp,reward,rsprime) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)""",
