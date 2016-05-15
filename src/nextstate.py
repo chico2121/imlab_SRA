@@ -1,7 +1,7 @@
-from problemIO import problemreader
-from learner import solution
-from learner import action
-from learner import actiongenerator
+import problemreader
+import solution
+import action
+import actiongenerator
 
 
 
