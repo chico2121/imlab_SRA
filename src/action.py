@@ -1,4 +1,4 @@
-from problemIO import problemreader
+import problemreader
 import networkx as nx
 import math
 import solution
