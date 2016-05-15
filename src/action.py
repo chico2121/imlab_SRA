@@ -122,7 +122,7 @@ class action(object):
 
         # remove edges weighted 0
 
-        for n, nbrs in G.adjacency_iter():
+        for n, nbrs in G.adjacency():
             for nbr, eattr in nbrs.items():
                 data = eattr['weight']
                 if int(data) == 0:
@@ -208,7 +208,7 @@ class action(object):
 
         # remove edges weighted 0
 
-        for n, nbrs in G.adjacency_iter():
+        for n, nbrs in G.adjacency():
             for nbr, eattr in nbrs.items():
                 data = eattr['weight']
                 if data == 0.0:
