@@ -513,327 +513,295 @@ class action(object):
                 cycletime = c4
         return sol, cycletime
 
-    def dijk_density_SSRR_0(self, rs, column, floor, input, output): #man jer man jer
-
-        if rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[0]) >= rs.count(output[1]):
-            input = [input[0],input[1]]
-            output = [output[0],output[1]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-        elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[0]) >= rs.count(output[1]):
-            input = [input[1],input[0]]
-            output = [output[0],output[1]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-        elif rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[1]) > rs.count(output[0]):
-            input = [input[0],input[1]]
-            output = [output[1],output[0]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-        elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[1]) > rs.count(output[0]):
-            input = [input[1],input[0]]
-            output = [output[1],output[0]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-    def dijk_density_SSRR_1(self, rs, column, floor, input, output): #jer man man jer
-
-        if rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[0]) >= rs.count(output[1]):
-            input = [input[1], input[0]]
-            output = [output[0], output[1]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-        elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[0]) >= rs.count(output[1]):
-            input = [input[0], input[1]]
-            output = [output[0], output[1]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-        elif rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[1]) > rs.count(output[0]):
-            input = [input[1], input[0]]
-            output = [output[1], output[0]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-        elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[1]) > rs.count(output[0]):
-            input = [input[0], input[1]]
-            output = [output[1], output[0]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-    def dijk_density_SSRR_2(self, rs, column, floor, input, output):  # man jer jer man
-
-        if rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[0]) >= rs.count(output[1]):
-            input = [input[0], input[1]]
-            output = [output[1], output[0]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-        elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[0]) >= rs.count(output[1]):
-            input = [input[1], input[0]]
-            output = [output[1], output[0]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-        elif rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[1]) > rs.count(output[0]):
-            input = [input[0], input[1]]
-            output = [output[0], output[1]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-        elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[1]) > rs.count(output[0]):
-            input = [input[1], input[0]]
-            output = [output[0], output[1]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-    def dijk_density_SSRR_3(self, rs, column, floor, input, output):  # jer man jer man
-
-        if rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[0]) >= rs.count(output[1]):
-            input = [input[1], input[0]]
-            output = [output[1], output[0]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-        elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[0]) >= rs.count(output[1]):
-            input = [input[0], input[1]]
-            output = [output[1], output[0]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-        elif rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[1]) > rs.count(output[0]):
-            input = [input[1], input[0]]
-            output = [output[0], output[1]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-        elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[1]) > rs.count(output[0]):
-            input = [input[0], input[1]]
-            output = [output[0], output[1]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-    def dijk_density_SRSR_4(self, rs, column, floor, input, output):  # man jer man jer
-
-        if rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[0]) >= rs.count(output[1]):
-            input = [input[0], input[1]]
-            output = [output[0], output[1]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-        elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[0]) >= rs.count(output[1]):
-            input = [input[1], input[0]]
-            output = [output[0], output[1]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-        elif rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[1]) > rs.count(output[0]):
-            input = [input[0], input[1]]
-            output = [output[1], output[0]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-        elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[1]) > rs.count(output[0]):
-            input = [input[1], input[0]]
-            output = [output[1], output[0]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-    def dijk_density_SRSR_5(self, rs, column, floor, input, output):  # jer man man jer
-
-        if rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[0]) >= rs.count(output[1]):
-            input = [input[1], input[0]]
-            output = [output[0], output[1]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-        elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[0]) >= rs.count(output[1]):
-            input = [input[0], input[1]]
-            output = [output[0], output[1]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-        elif rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[1]) > rs.count(output[0]):
-            input = [input[1], input[0]]
-            output = [output[1], output[0]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-        elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[1]) > rs.count(output[0]):
-            input = [input[0], input[1]]
-            output = [output[1], output[0]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-    def dijk_density_SRSR_6(self, rs, column, floor, input, output):  # man jer jer man
-
-        if rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[0]) >= rs.count(output[1]):
-            input = [input[0], input[1]]
-            output = [output[1], output[0]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-        elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[0]) >= rs.count(output[1]):
-            input = [input[1], input[0]]
-            output = [output[1], output[0]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-        elif rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[1]) > rs.count(output[0]):
-            input = [input[0], input[1]]
-            output = [output[0], output[1]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-        elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[1]) > rs.count(output[0]):
-            input = [input[1], input[0]]
-            output = [output[0], output[1]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-    def dijk_density_SRSR_7(self, rs, column, floor, input, output):  # jer man jer man
-
-        if rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[0]) >= rs.count(output[1]):
-            input = [input[1], input[0]]
-            output = [output[1], output[0]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-        elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[0]) >= rs.count(output[1]):
-            input = [input[0], input[1]]
-            output = [output[1], output[0]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-        elif rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[1]) > rs.count(output[0]):
-            input = [input[1], input[0]]
-            output = [output[0], output[1]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
-        elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[1]) > rs.count(output[0]):
-            input = [input[0], input[1]]
-            output = [output[0], output[1]]
-            io = input + output
-            a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
-            sol = solution.solution(d1, io, e1)
-            cycletime = c1
-            return sol, cycletime
-
     def dijk_density(self,rs,column,floor,input,output,idx):
         if idx == 0:
-            self.dijk_density_SSRR_0(rs,column,floor,input,output)
+            if rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[0]) >= rs.count(output[1]):
+                input = [input[0], input[1]]
+                output = [output[0], output[1]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
+
+            elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[0]) >= rs.count(output[1]):
+                input = [input[1], input[0]]
+                output = [output[0], output[1]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
+
+            elif rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[1]) > rs.count(output[0]):
+                input = [input[0], input[1]]
+                output = [output[1], output[0]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
+
+            elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[1]) > rs.count(output[0]):
+                input = [input[1], input[0]]
+                output = [output[1], output[0]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
         elif idx == 1:
-            self.dijk_density_SSRR_1(rs,column,floor,input,output)
+            if rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[0]) >= rs.count(output[1]):
+                input = [input[1], input[0]]
+                output = [output[0], output[1]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
+
+            elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[0]) >= rs.count(output[1]):
+                input = [input[0], input[1]]
+                output = [output[0], output[1]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
+
+            elif rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[1]) > rs.count(output[0]):
+                input = [input[1], input[0]]
+                output = [output[1], output[0]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
+
+            elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[1]) > rs.count(output[0]):
+                input = [input[0], input[1]]
+                output = [output[1], output[0]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
         elif idx == 2:
-            self.dijk_density_SSRR_2(rs,column,floor,input,output)
+            if rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[0]) >= rs.count(output[1]):
+                input = [input[0], input[1]]
+                output = [output[1], output[0]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
+
+            elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[0]) >= rs.count(output[1]):
+                input = [input[1], input[0]]
+                output = [output[1], output[0]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
+
+            elif rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[1]) > rs.count(output[0]):
+                input = [input[0], input[1]]
+                output = [output[0], output[1]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
+
+            elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[1]) > rs.count(output[0]):
+                input = [input[1], input[0]]
+                output = [output[0], output[1]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
         elif idx == 3:
-            self.dijk_density_SSRR_3(rs,column,floor,input,output)
+            if rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[0]) >= rs.count(output[1]):
+                input = [input[1], input[0]]
+                output = [output[1], output[0]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
+
+            elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[0]) >= rs.count(output[1]):
+                input = [input[0], input[1]]
+                output = [output[1], output[0]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
+
+            elif rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[1]) > rs.count(output[0]):
+                input = [input[1], input[0]]
+                output = [output[0], output[1]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
+
+            elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[1]) > rs.count(output[0]):
+                input = [input[0], input[1]]
+                output = [output[0], output[1]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_ssr1r2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
         elif idx == 4:
-            self.dijk_density_SRSR_4(rs,column,floor,input,output)
+            if rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[0]) >= rs.count(output[1]):
+                input = [input[0], input[1]]
+                output = [output[0], output[1]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
+
+            elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[0]) >= rs.count(output[1]):
+                input = [input[1], input[0]]
+                output = [output[0], output[1]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
+
+            elif rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[1]) > rs.count(output[0]):
+                input = [input[0], input[1]]
+                output = [output[1], output[0]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
+
+            elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[1]) > rs.count(output[0]):
+                input = [input[1], input[0]]
+                output = [output[1], output[0]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
         elif idx == 5:
-            self.dijk_density_SRSR_5(rs,column,floor,input,output)
+            if rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[0]) >= rs.count(output[1]):
+                input = [input[1], input[0]]
+                output = [output[0], output[1]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
+
+            elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[0]) >= rs.count(output[1]):
+                input = [input[0], input[1]]
+                output = [output[0], output[1]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
+
+            elif rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[1]) > rs.count(output[0]):
+                input = [input[1], input[0]]
+                output = [output[1], output[0]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
+
+            elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[1]) > rs.count(output[0]):
+                input = [input[0], input[1]]
+                output = [output[1], output[0]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
         elif idx == 6:
-            self.dijk_density_SRSR_6(rs,column,floor,input,output)
+            if rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[0]) >= rs.count(output[1]):
+                input = [input[0], input[1]]
+                output = [output[1], output[0]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
+
+            elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[0]) >= rs.count(output[1]):
+                input = [input[1], input[0]]
+                output = [output[1], output[0]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
+
+            elif rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[1]) > rs.count(output[0]):
+                input = [input[0], input[1]]
+                output = [output[0], output[1]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
+
+            elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[1]) > rs.count(output[0]):
+                input = [input[1], input[0]]
+                output = [output[0], output[1]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
         elif idx == 7:
-            self.dijk_density_SRSR_7(rs,column,floor,input,output)
+            if rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[0]) >= rs.count(output[1]):
+                input = [input[1], input[0]]
+                output = [output[1], output[0]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
+
+            elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[0]) >= rs.count(output[1]):
+                input = [input[0], input[1]]
+                output = [output[1], output[0]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
+
+            elif rs.count(input[0]) >= rs.count(input[1]) and rs.count(output[1]) > rs.count(output[0]):
+                input = [input[1], input[0]]
+                output = [output[0], output[1]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
+
+            elif rs.count(input[1]) > rs.count(input[0]) and rs.count(output[1]) > rs.count(output[0]):
+                input = [input[0], input[1]]
+                output = [output[0], output[1]]
+                io = input + output
+                a1, b1, c1, d1, e1 = self.dijk_sr1sr2(rs, column, floor, output)
+                sol = solution.solution(d1, io, e1)
+                cycletime = c1
+                return sol, cycletime
 
 
 
